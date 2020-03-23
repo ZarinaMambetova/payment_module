@@ -58,8 +58,8 @@ body {
 
 
 
-.result {
-    width: 80%;
+.row__item2 {
+    width: 70%;
     height: 40%;
     position: absolute;
     background: #fff;
@@ -68,3 +68,4 @@ body {
     color: #3e485c;
     margin-top: 20px;
 }
+

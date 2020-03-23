@@ -23,9 +23,15 @@
       if (XPathResult.status >= 400) {
         result.innerText = 'Что-то пошло не так';
       } else {
+        result.insertAdjacentText('beforebegin', result.innerText);
         result.innerText = xhr.response.data;
+                       
       }
+      
       console.log(xhr);
     });
   });
+
+  // 
+  // d1.
 })();

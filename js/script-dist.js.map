@@ -1,1 +1,1 @@
-{"version":3,"sources":["script.js"],"names":["value","XMLHttpRequest","data","xhr"],"mappings":"cAAA,wCAEA,oCACA,wCACA,iGAQAA,iCACAA,6BACAA,6BACAA,aAGAC,kLAMA,6CAEAC,iBAEAC,OA5BA"}
+{"version":3,"sources":["script.js"],"names":["value","XMLHttpRequest","innerText","data","xhr"],"mappings":"cAAA,wCAEA,oCACA,wCACA,iGAQAA,iCACAA,6BACAA,6BACAA,aAGAC,kLAMA,4DAEAC,kCACAC,kBAIAC,OA/BA"}
