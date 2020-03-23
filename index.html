@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="css/main.css">
+    <title>new payment</title>
+</head>
+<body>
+    <header id="header">
+            <div class="container">
+              <h1>Добавление новой оплаты</h1>
+                <div class="row_items-center">
+                    <div class="row__item">
+                        <div class="formWrapper">
+                            <form method="post" action="addPayment" id="myForm">
+                                <div class="form-group">
+                                    <label for="host">Хост или электронная почта</label>
+                                    <input type="text" class="form-control" id="host" name="host" required>
+                                </div>
+                                <div class="row">
+                                        <div class="form-group">
+                                            <label for="rate_id">Название услуги</label>
+                                            <select name="rate_id" id="rate_id" class="form-control" required>
+                                                <option value="0" selected>Выберите услугу</option>
+                                                <option value="1 - Верхний баннер 1600*60 (7дн./RU)">1 - Верхний баннер 1600*60 (7дн./RU)</option>
+                                                <option value="2 - Баннер 1379*380 (7дн./RU)">2 - Баннер 1379*380 (7дн./RU)</option>
+                                                <option value="3 - Публикация в группе ВК (7дн./RU)">3 - Публикация в группе ВК (7дн./RU)</option>
+                                                <option value="4 - Баннер 185*185 Каталог сайтов (7дн./RU)">4 - Баннер 185*185 Каталог сайтов (7дн./RU)</option>
+                                                <option value="5 - Дизайн баннера 1600*60">5 - Дизайн баннера 1600*60</option>
+                                                <option value="6 - Дизайн баннера 185*185">6 - Дизайн баннера 185*185</option>
+                                                <option value="7 - Публикация в группе ОК (7дн./RU)">7 - Публикация в группе ОК (7дн./RU)</option>
+                                                <option value="8 - Комплекс действий по информационной поддержке">8 - Комплекс действий по информационной поддержке</option>
+                                                <option value="25 - Баннер 200*250 Бесплатные сайта (7дн./RU)">25 - Баннер 200*250 Бесплатные сайта (7дн./RU)</option>
+                                                <option value="26 - Баннер 200*250 Каталог сайтов (7дн./RU)">26 - Баннер 200*250 Каталог сайтов (7дн./RU)</option>
+                                                <option value="28 - Баннер 1379*380 (7дн./RU)">28 - Баннер 1379*380 (7дн./RU)</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="count">Количество</label>
+                                            <input type="number" class="form-control" id="count" name="count" min="1" step="1" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="price">Стоимость услуги</label>
+                                            <input type="text" class="form-control" id="price" name="price" min="0" required>
+                                        </div>
+                                    </div>
+                                    <div class="form__btn">
+                                        <button class="btn" type="submit" id="sendButton">Добавить</button>
+                                        <input type="reset" value="Очистить">
+                                    
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                    <div class="row__item">
+                        <div class="result" id="result">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <script src='js/script.js'></script>
+</body>
+</html>
