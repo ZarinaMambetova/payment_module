@@ -19,6 +19,7 @@
                                 <div class="form-group">
                                     <label for="host">Хост или электронная почта</label>
                                     <input type="text" class="form-control" id="host" name="host" required>
+                                    <div class="error"></div>
                                 </div>
                                 <div class="row">
                                         <div class="form-group">
@@ -37,26 +38,34 @@
                                                 <option value="26 - Баннер 200*250 Каталог сайтов (7дн./RU)">26 - Баннер 200*250 Каталог сайтов (7дн./RU)</option>
                                                 <option value="28 - Баннер 1379*380 (7дн./RU)">28 - Баннер 1379*380 (7дн./RU)</option>
                                             </select>
+                                            <div class="error"></div>
                                         </div>
                                         <div class="form-group">
                                             <label for="count">Количество</label>
                                             <input type="number" class="form-control" id="count" name="count" min="1" step="1" required>
+                                            <div class="error"></div>
                                         </div>
                                         <div class="form-group">
                                             <label for="price">Стоимость услуги</label>
-                                            <input type="text" class="form-control" id="price" name="price" min="0" required>
+                                            <input type="number" class="form-control" id="price" name="price" min="0" required>
+                                            <div class="error"></div>
                                         </div>
                                     </div>
                                     <div class="form__btn">
                                         <button class="btn" type="submit" id="sendButton">Добавить</button>
                                         <input type="reset" value="Очистить">
-                                    
+                                        <div class="error"></div>
                                     </div>
                                 </div>
                             </form>
                     </div>
                     <div class="row__item row__item2">
-                        <div class="result" id="result"></div>
+                        <div class="result" id="result">
+                            <div class="host_res" id="host_res"></div>
+                            <div class="rate_id_res" id="rate_id_res"></div>
+                            <div class="count_res" id="count_res"></div>
+                            <div class="price_res" id="price_res"></div>
+                        </div>
                     </div>
                 </div>
             </div>
