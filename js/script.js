@@ -19,10 +19,10 @@
 
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json'; //ожидаем от сервера данные в формате json
-        xhr.open('POST', 'https://httpbin.org/post'); // Метод post и куда отправляем данные. Адрес сервера сменить на нужный!
+        xhr.open('POST', 'https://zeta2.dev.sliza.ru/api/v1/payment.php'); // Метод post и куда отправляем данные. Адрес сервера сменить на нужный!
         xhr.send(JSON.stringify(data)); // превращаем данные в сроку и отправляем на сервер
         xhr.addEventListener('load', () => {
-          if (XPathResult.status >= 400) {
+          if (xhr.response.status >= 400) {
             result.innerText = 'Что-то пошло не так';
           } else {
             result.insertAdjacentText('beforebegin', result.innerText); //мультизапись - без удаления предыдущего
