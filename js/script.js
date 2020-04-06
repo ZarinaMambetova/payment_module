@@ -10,16 +10,21 @@
      if (validateForm(myForm)) {  //запускаем проверку правильности заполнения данных. 
 
         //собираем данные с формы - name
-        const data = {
-          host: myForm.elements.host.value,
-          rate_id: myForm.elements.rate_id.value,
-          count: myForm.elements.count.value,
-          price: myForm.elements.price.value 
-        };
+       const data = {
+        action: "addPayment",
+        params: {
+            host: myForm.elements.host.value,
+            price: myForm.elements.price.value,
+            count: myForm.elements.count.value,
+            rate_id: myForm.elements.rate_id.value,
+        }
+         
+       };
+       
 
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json'; //ожидаем от сервера данные в формате json
-        xhr.open('POST', 'https://zeta2.dev.sliza.ru/api/v1/payment.php'); // Метод post и куда отправляем данные. Адрес сервера сменить на нужный!
+        xhr.open('POST', 'https://zeta2.dev.sliza.ru/api/v1/payment.php'); // Метод post и куда отправляем данные. 
         xhr.send(JSON.stringify(data)); // превращаем данные в сроку и отправляем на сервер
         xhr.addEventListener('load', () => {
           if (xhr.response.status >= 400) {
@@ -27,6 +32,7 @@
           } else {
             result.insertAdjacentText('beforebegin', result.innerText); //мультизапись - без удаления предыдущего
             result.innerText = xhr.response.data; 
+            
                           
           }
           
