@@ -58,7 +58,7 @@ body {
 
 
 
-.row__item2 {
+.row__item_result {
     width: 70%;
     height: 40%;
     position: absolute;
@@ -69,7 +69,18 @@ body {
     margin-top: 20px;
 }
 
+.row__item_result {
+display: flex;
+justify-content: space-between;
+}
 
+.param__name {
+    
+    margin-bottom: 17px;
+}
+.row__item_result div {
+text-align: center;
+    }
 .error {
     color: red;
     

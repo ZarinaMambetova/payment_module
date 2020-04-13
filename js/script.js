@@ -2,6 +2,10 @@
   const myForm = document.querySelector('#myForm');
   const sendButton = document.querySelector('#sendButton');
   const result = document.querySelector('#result');
+  const form_host = document.querySelector('#form_host');
+  const form_price = document.querySelector('#form_price');
+  const form_count = document.querySelector('#form_count');
+  const form_rate_id = document.querySelector('#form_rate_id');
 
    sendButton.addEventListener('click', function(event) {
     //Обработчик события "клик"
@@ -25,22 +29,37 @@
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json'; //ожидаем от сервера данные в формате json
         xhr.open('POST', 'https://zeta2.dev.sliza.ru/api/v1/payment.php'); // Метод post и куда отправляем данные. 
-        xhr.send(JSON.stringify(data)); // превращаем данные в сроку и отправляем на сервер
+       xhr.send(JSON.stringify(data)); // превращаем данные в сроку и отправляем на сервер
         xhr.addEventListener('load', () => {
           if (xhr.response.status >= 400) {
             result.innerText = 'Что-то пошло не так';
           } else {
-            result.insertAdjacentText('beforebegin', result.innerText); //мультизапись - без удаления предыдущего
-            result.innerText = xhr.response.data; 
+            //мультизапись - без удаления предыдущего:
+            result.insertAdjacentText('beforebegin', result.innerText); 
+            result.insertAdjacentHTML('beforebegin', '<br>');
+            form_host.insertAdjacentText('beforebegin', form_host.innerText);
+            form_host.insertAdjacentHTML('beforebegin', '<br>');
+            form_price.insertAdjacentText('beforebegin', form_price.innerText);
+            form_price.insertAdjacentHTML('beforebegin', '<br>');
+            form_count.insertAdjacentText('beforebegin', form_count.innerText);
+            form_count.insertAdjacentHTML('beforebegin', '<br>');
+            form_rate_id.insertAdjacentText('beforebegin', form_rate_id.innerText);
+            form_rate_id.insertAdjacentHTML('beforebegin', '<br>');
             
+            // вывод необходимых значений по колонкам:
+            result.innerText = xhr.response.result; 
+            form_host.innerText = data.params.host; 
+            form_price.innerText = data.params.price; 
+            form_count.innerText = data.params.count; 
+            form_rate_id.innerText = data.params.rate_id; 
                           
           }
-          
           console.log(xhr);
+          console.log(data);
         });
      }
    });
-  
+ 
   
   // валидация заполнения каждого элемента формы. Если эта часть ок, тогда запрос пройдет:
 
@@ -71,4 +90,6 @@
   }
 
 })();
+
+
 
