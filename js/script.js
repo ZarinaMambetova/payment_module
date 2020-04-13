@@ -35,20 +35,20 @@
             result.innerText = 'Что-то пошло не так';
           } else {
             //мультизапись - без удаления предыдущего:
-            result.insertAdjacentHTML('beforebegin', "<div>" + result.innerText + "</div>"); 
+            result.insertAdjacentHTML('beforebegin', "<div class='old_result'>" + result.innerHTML + "</div>"); 
           
-            form_host.insertAdjacentHTML('beforebegin', "<div>" + form_host.innerText + "</div>");
-            form_price.insertAdjacentHTML('beforebegin', "<div>" + form_price.innerText + "</div>");
-            form_count.insertAdjacentHTML('beforebegin', "<div>" + form_count.innerText + "</div>");
-            form_rate_id.insertAdjacentHTML('beforebegin', "<div>" + form_rate_id.innerText + "</div>");
+            // form_host.insertAdjacentHTML('beforebegin', "<div>" + form_host.innerText + "</div>");
+            // form_price.insertAdjacentHTML('beforebegin', "<div>" + form_price.innerText + "</div>");
+            // form_count.insertAdjacentHTML('beforebegin', "<div>" + form_count.innerText + "</div>");
+            // form_rate_id.insertAdjacentHTML('beforebegin', "<div>" + form_rate_id.innerText + "</div>");
             
             // вывод необходимых значений по колонкам:
-            result.innerText = xhr.response.result; 
-            form_host.innerText = data.params.host; 
-            form_price.innerText = data.params.price; 
-            form_count.innerText = data.params.count; 
-            form_rate_id.innerText = data.params.rate_id; 
-                          
+            result.innerHTML = "<div>" + data.params.host + "</div>" + "<div>" + data.params.price + "</div>" + "<div>" + data.params.count + "</div>" + "<div>" + data.params.rate_id + "</div>" + "<div>" + xhr.response.result + "</div>"; 
+            // form_host.innerText = data.params.host; 
+            // form_price.innerText = data.params.price; 
+            // form_count.innerText = data.params.count; 
+            // form_rate_id.innerText = data.params.rate_id; 
+           
           }
           console.log(xhr);
           console.log(data);
