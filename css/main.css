@@ -72,8 +72,8 @@ body {
 .param__name {
     margin-bottom: 17px;
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    justify-content: space-around;
+    
 }
 
 .param__name div:last-child{
