@@ -7,7 +7,7 @@ body {
 } 
 
 .container {
-    max-width: 1240px;
+    max-width: 1700px;
     width: 95%;
     margin: 0 auto;
 }
@@ -59,14 +59,13 @@ body {
 
 
 .row__item_result {
-    width: 92%;
-    height: 100%;
-    position: absolute;
+    
     background: #fff;
     padding: 30px 20px;
     border-radius: 7px;
     color: #3e485c;
     margin-top: 20px;
+    min-height: 550px;
 }
 
 .param__name {
