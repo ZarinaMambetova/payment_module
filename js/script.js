@@ -35,16 +35,12 @@
             result.innerText = 'Что-то пошло не так';
           } else {
             //мультизапись - без удаления предыдущего:
-            result.insertAdjacentText('beforebegin', result.innerText); 
-            result.insertAdjacentHTML('beforebegin', '<br>');
-            form_host.insertAdjacentText('beforebegin', form_host.innerText);
-            form_host.insertAdjacentHTML('beforebegin', '<br>');
-            form_price.insertAdjacentText('beforebegin', form_price.innerText);
-            form_price.insertAdjacentHTML('beforebegin', '<br>');
-            form_count.insertAdjacentText('beforebegin', form_count.innerText);
-            form_count.insertAdjacentHTML('beforebegin', '<br>');
-            form_rate_id.insertAdjacentText('beforebegin', form_rate_id.innerText);
-            form_rate_id.insertAdjacentHTML('beforebegin', '<br>');
+            result.insertAdjacentHTML('beforebegin', "<div>" + result.innerText + "</div>"); 
+          
+            form_host.insertAdjacentHTML('beforebegin', "<div>" + form_host.innerText + "</div>");
+            form_price.insertAdjacentHTML('beforebegin', "<div>" + form_price.innerText + "</div>");
+            form_count.insertAdjacentHTML('beforebegin', "<div>" + form_count.innerText + "</div>");
+            form_rate_id.insertAdjacentHTML('beforebegin', "<div>" + form_rate_id.innerText + "</div>");
             
             // вывод необходимых значений по колонкам:
             result.innerText = xhr.response.result; 
