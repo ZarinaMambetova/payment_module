@@ -1,120 +1,108 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: rgba(59, 76, 146, 0.5);
-    width: 100%;
-    height: 100%;
-    margin: 0;
-} 
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(59, 76, 146, 0.5);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
 
 .container {
-    max-width: 1700px;
-    width: 95%;
-    margin: 0 auto;
+  max-width: 1700px;
+  width: 95%;
+  margin: 0 auto;
 }
 
 #header .center {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #fff;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
 }
 
 #header .formWrapper {
-    background: #fff;
-    padding: 30px 40px;
-    border-radius: 7px;
-    color: #3e485c;
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 7px;
+  color: #3e485c;
 }
 
 #header .formWrapper .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 #header .formWrapper label {
-    font-weight: 700;
-    font-size: 0.8em;
+  font-weight: 700;
+  font-size: 0.8em;
 }
 
-#header .formWrapper input, 
+#header .formWrapper input,
 #header .formWrapper select {
-    background: #ebecee;
-    border:none;
-    font-size: 14px;
-    height: 40px;
-    padding: 5px;
+  background: #ebecee;
+  border: none;
+  font-size: 14px;
+  height: 40px;
+  padding: 5px;
 }
 
 #header .formWrapper input:focus {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 #header .formWrapper button {
-    background: #5c5cf1;
-    color: #fff;
-    font-weight: 700;
-    padding: 12px 30px;
-    font-size: .9em;
+  background: #5c5cf1;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 30px;
+  font-size: .9em; 
 }
 
-
-
 .row__item_result {
-    
-    background: #fff;
-    padding: 30px 20px;
-    border-radius: 7px;
-    color: #3e485c;
-    margin-top: 20px;
-    min-height: 550px;
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 7px;
+  color: #3e485c;
+  margin-top: 20px;
+  min-height: 550px;
 }
 
 .param__name {
-    margin-bottom: 17px;
-    display: flex;
-  
-    
+  margin-bottom: 17px;
+  display: flex;
 }
-.param__name div{
-    width: 170px;
- 
+.param__name div {
+  width: 170px;
 }
-.param__name div:last-child{
-    width: 390px;
- 
+.param__name div:last-child {
+  width: 390px;
 }
 
 .error {
-    color: red;
-    
-  }
-  .result {
+  color: red;
+}
+.result {
   font-weight: bold;
   display: flex;
-     
-  }
-  .old_result {
-      display: flex;
-      
-     
-  }
+}
+.old_result {
+  display: flex;
+}
 
-  .result div{
-margin-right: 15px;
-width: 160px;
+.result div {
+  margin-right: 15px;
+  width: 160px;
+}
 
-  }
+.old_result div {
+  margin-right: 15px;
+  margin-bottom: 10px;
+  width: 160px;
+}
 
-  .old_result div {
-    margin-right: 15px;
-    margin-bottom: 10px;
-    width: 160px;
-  }
-
-  .old_result div:last-child{
-    width: 390px;
+.old_result div:last-child {
+  width: 390px;
   word-wrap: break-word;
 }
-  .result div:last-child{
-      width: 390px;
-    word-wrap: break-word;
+.result div:last-child {
+  width: 390px;
+  word-wrap: break-word;
 }
