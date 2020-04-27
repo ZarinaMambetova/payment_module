@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["script.js"],"names":["validationMessage","checkValidity","valid","value","XMLHttpRequest","innerHTML","data","params","host","price","count","rate_id","xhr","response","result"],"mappings":"cAAA,mEAwFAA,oBACAC,6CAvFA,oCACA,wCACA,kCACA,qCACA,sCACA,sCACA,iFA2DA,8BAGA,8BAIA,4BAIA,4BAIA,GAEAC,EAtEA,mBAKA,iBACA,0CAEAC,6BACAA,6BACAA,iCACAA,cAIAC,oMAMA,iGAGA,YAGAC,UACA,QAAAC,EAAAC,OACAC,KACA,cACAF,EAAAC,OACAE,MACA,cACAH,EAAAC,OACAG,MACA,cACAJ,EAAAC,OACAI,QACA,cACAC,EAAAC,SACAC,OACA,sBAEAF,eACAN,eA3DA"}
+=======
+{"version":3,"sources":["script.js"],"names":["validationMessage","checkValidity","valid","value","XMLHttpRequest","innerHTML","data","params","host","price","count","rate_id","xhr","response","result"],"mappings":"cAAA,mEAwFAA,oBACAC,6CAvFA,oCACA,wCACA,kCACA,qCACA,sCACA,sCACA,iFA2DA,8BAGA,8BAIA,4BAIA,4BAIA,GAEAC,EAtEA,eAKA,0CAEAC,6BACAA,6BACAA,iCACAA,cAKAC,sMAMA,iGAGA,YAGAC,UACA,QAAAC,EAAAC,OACAC,KACA,cACAF,EAAAC,OACAE,MACA,cACAH,EAAAC,OACAG,MACA,cACAJ,EAAAC,OACAI,QACA,cACAC,EAAAC,SACAC,OACA,sBAEAF,eACAN,eA3DA"}
+>>>>>>> 86a5973108ffef8f66f35f66bafc4e6b831dddb5

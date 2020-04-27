@@ -3,8 +3,8 @@
   const sendButton = document.querySelector('#sendButton');
   const result = document.querySelector('#result');
 
+  //Обработчик события "клик"
   sendButton.addEventListener('click', function(event) {
-    //Обработчик события "клик"
     event.preventDefault(); //страница не будет перезагружаться после клика
 
     if (validateForm(myForm)) {
@@ -14,6 +14,7 @@
       const data = {
         controller: 'Payment',
         action: 'payment',
+
         params: {
           host: myForm.elements.host.value,
           price: myForm.elements.price.value,
@@ -27,10 +28,11 @@
       xhr.open('POST', 'https://zeta2.dev.sliza.ru/api/v1/index.php'); // Метод post и куда отправляем данные.
       xhr.send(JSON.stringify(data)); // превращаем данные в сроку и отправляем на сервер
       xhr.addEventListener('load', () => {
-        if (xhr.response.success = false) {
+        if ((xhr.response.success = false)) {
           result.innerText = 'Что-то пошло не так';
         } else {
           //мультизапись - без удаления предыдущего:
+
           result.insertAdjacentHTML('beforebegin', "<div class='old_result'>" + result.innerHTML + '</div>');
 
           // вывод необходимых значений по колонкам:
