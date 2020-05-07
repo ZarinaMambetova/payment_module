@@ -1,20 +1,20 @@
 (function() {
-  if (window.location.protocol == 'http:') {
-    window.location.replace('https://'.window.location.host);
-  }
-
   const myForm = document.querySelector('#myForm');
   const sendButton = document.querySelector('#sendButton');
   const result = document.querySelector('#result');
 
+  // Функция для перенаправления на главную страницу слизы для тех, у кого нет доступа к модулю:
   function redirect() {
     window.location.replace('https://sliza.ru');
   }
+
+  // Обозначаю, с какого адреса идет запрос, чтобы можно было тестить без основного адреса:
   let url = '';
-  if (window.location.href.includes('ZarinaMambetova') || window.location.href.includes(':5500'))
+  if (window.location.href.includes('ambetova') || window.location.href.includes(':5500'))
     url = 'https://zeta2.dev.sliza.ru/api/v1/index.php' + window.location.search;
   else url = 'https://sliza.ru/api/v1/index.php' + window.location.search;
-  //Обработчик события "клик"
+
+  //Обработчик события "клик":
   sendButton.addEventListener('click', function(event) {
     event.preventDefault(); //страница не будет перезагружаться после клика
 
@@ -39,7 +39,8 @@
       xhr.open('POST', url, true); // Метод post и куда отправляем данные.
       xhr.send(JSON.stringify(data)); // превращаем данные в сроку и отправляем на сервер
       xhr.addEventListener('load', () => {
-        if ((xhr.response.success = 'false')) {
+        // если нет прав, то редирект:
+        if (xhr.response.success == false) {
           redirect();
         } else {
           //мультизапись - без удаления предыдущего:
@@ -47,6 +48,7 @@
           result.insertAdjacentHTML('beforebegin', "<div class='old_result'>" + result.innerHTML + '</div>');
 
           // вывод необходимых значений по колонкам:
+
           result.innerHTML =
             '<div>' +
             data.params.host +
