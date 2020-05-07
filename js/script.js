@@ -1,8 +1,19 @@
 (function() {
+  if (window.location.protocol == 'http:') {
+    window.location.replace('https://'.window.location.host);
+  }
+
   const myForm = document.querySelector('#myForm');
   const sendButton = document.querySelector('#sendButton');
   const result = document.querySelector('#result');
 
+  function redirect() {
+    window.location.replace('https://sliza.ru');
+  }
+  let url = '';
+  if (window.location.href.includes('ZarinaMambetova') || window.location.href.includes(':5500'))
+    url = 'https://zeta2.dev.sliza.ru/api/v1/index.php' + window.location.search;
+  else url = 'https://sliza.ru/api/v1/index.php' + window.location.search;
   //Обработчик события "клик"
   sendButton.addEventListener('click', function(event) {
     event.preventDefault(); //страница не будет перезагружаться после клика
@@ -25,11 +36,11 @@
 
       const xhr = new XMLHttpRequest();
       xhr.responseType = 'json'; //ожидаем от сервера данные в формате json
-      xhr.open('POST', 'https://zeta2.dev.sliza.ru/api/v1/index.php'); // Метод post и куда отправляем данные.
+      xhr.open('POST', url, true); // Метод post и куда отправляем данные.
       xhr.send(JSON.stringify(data)); // превращаем данные в сроку и отправляем на сервер
       xhr.addEventListener('load', () => {
-        if ((xhr.response.success = false)) {
-          result.innerText = 'Что-то пошло не так';
+        if ((xhr.response.success = 'false')) {
+          redirect();
         } else {
           //мультизапись - без удаления предыдущего:
 
