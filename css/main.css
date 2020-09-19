@@ -53,27 +53,39 @@ body {
   color: #fff;
   font-weight: 700;
   padding: 12px 30px;
-  font-size: .9em; 
+  font-size: .9em;
 }
 
 .row__item_result {
   background: #fff;
-  padding: 30px 20px;
+  padding: 30px 15px;
   border-radius: 7px;
   color: #3e485c;
   margin-top: 20px;
   min-height: 550px;
+  font-size: 14px;
 }
 
 .param__name {
   margin-bottom: 17px;
   display: flex;
+  font-size: 16px;
 }
 .param__name div {
-  width: 170px;
+  width: 130px;
+}
+.param__name div:nth-child(5) {
+  width: 220px;
 }
 .param__name div:last-child {
-  width: 390px;
+  width: 285px;
+}
+.param__row-result {
+  text-align: center;
+}
+
+.param__name div:nth-child(1) {
+  width: 200px;
 }
 
 .error {
@@ -82,27 +94,43 @@ body {
 .result {
   font-weight: bold;
   display: flex;
+  margin-bottom: 10px;
 }
 .old_result {
   display: flex;
 }
-
-.result div {
-  margin-right: 15px;
-  width: 160px;
-}
-
 .old_result div {
   margin-right: 15px;
   margin-bottom: 10px;
-  width: 160px;
+  width: 130px;
+}
+.result div {
+  margin-right: 15px;
+  width: 130px;
+}
+.result div:nth-child(1) {
+  margin-right: 15px;
+  width: 200px;
+}
+.old_result div:nth-child(1) {
+  margin-right: 15px;
+  width: 200px;
 }
 
 .old_result div:last-child {
-  width: 390px;
+  width: 285px;
   word-wrap: break-word;
 }
 .result div:last-child {
-  width: 390px;
+  width: 285px;
   word-wrap: break-word;
+}
+
+.old_result div:nth-child(5) {
+  width: 270px;
+  text-align: initial;
+}
+.result div:nth-child(5) {
+  width: 270px;
+  text-align: initial;
 }
